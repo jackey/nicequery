@@ -23,7 +23,7 @@ zend_module_entry nice_query_module_entry = {
 	NULL,
 	NULL,
 	#if ZEND_MODULE_API_NO >= 20010901
-    PHP_NICE_QUERY_VERSIOn,
+    PHP_NICE_QUERY_VERSION,
 	#endif
 	STANDARD_MODULE_PROPERTIES
 };
