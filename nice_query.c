@@ -11,10 +11,7 @@ static zend_function_entry nice_query_functions[] = {
 };
 
 zend_module_entry nice_query_module_entry = {
-	#if ZEND_MODULE_API_NO >= 20010901
     STANDARD_MODULE_HEADER,
-	#endif
-
 	PHP_NICE_QUERY_EXTNAME,
 	nice_query_functions,
 	NULL,
@@ -22,9 +19,7 @@ zend_module_entry nice_query_module_entry = {
 	NULL,
 	NULL,
 	NULL,
-	#if ZEND_MODULE_API_NO >= 20010901
     PHP_NICE_QUERY_VERSION,
-	#endif
 	STANDARD_MODULE_PROPERTIES
 };
 
