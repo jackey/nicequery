@@ -1,8 +1,3 @@
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
-#include "php.h"
 #include "php_nice_query.h"
 
 static zend_function_entry nice_query_functions[] = {
@@ -11,7 +6,7 @@ static zend_function_entry nice_query_functions[] = {
 };
 
 zend_module_entry nice_query_module_entry = {
-    STANDARD_MODULE_HEADER,
+	STANDARD_MODULE_HEADER,
 	PHP_NICE_QUERY_EXTNAME,
 	nice_query_functions,
 	NULL,
@@ -19,7 +14,7 @@ zend_module_entry nice_query_module_entry = {
 	NULL,
 	NULL,
 	NULL,
-    PHP_NICE_QUERY_VERSION,
+	PHP_NICE_QUERY_VERSION,
 	STANDARD_MODULE_PROPERTIES
 };
 
@@ -27,3 +22,6 @@ PHP_FUNCTION(hello_world) {
 	RETURN_STRING("Hello, world", 1);
 }
 
+#ifdef COMPILE_DL_NICE_QUERY
+ZEND_GET_MODULE(nice_query)
+#endif
