@@ -6,7 +6,7 @@
 #include "php_nice_query.h"
 
 static zend_function_entry nice_query_functions[] = {
-	PHP_FE(hello_world, NULL),
+	PHP_FE(hello_world, NULL)
 	{NULL, NULL, NULL}
 };
 
