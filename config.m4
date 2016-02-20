@@ -3,5 +3,5 @@ PHP_ARG_ENABLE(nice_query, whether to enable nice query support,
 
 if test $PHP_NICE_QUERY = "yes"; then 
 	AC_DEFINE(HAVE_NICE_QUERY, 1, [Whether to enbale nice query support])
-	PHP_NEW_EXNTESION(nice_query, nice_query.c, $ext_shared)
+	PHP_NEW_EXTENSION(nice_query, nice_query.c, $ext_shared)
 fi
