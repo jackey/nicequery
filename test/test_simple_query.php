@@ -7,9 +7,22 @@ class NiceQueryInsert {
 }
 
 class NiceQuerySelect {
-	/**
-	 * TODO::
-	 */
+	select();
+
+	where();
+
+	orWhere();
+
+	andWhere();
+
+	sqlWhere();
+
+	limit();
+
+	offset();
+
+	
+
 }
 
 class NiceQueryUpdate() {
@@ -21,8 +34,29 @@ class NiceQueryUpdate() {
 
 class NiceQuery {
 	/**
-	 * TODO::
+	 * 返回一个 NiceQuerySelect 对象
 	 */
+	from(); 
+
+	/**
+	 * 返回一个 NiceQueryUpdate 对象
+	 */
+	update(); 
+
+	/**
+	 * 返回一个 NiceQueryDelete 对象
+	 */
+	delete();
+
+	/**
+	 * 返回一个 NiceQueryInsert 对象 
+	 */
+	insert();
+
+	/**
+	 * 返回一个 NiceQuerySQL 对象
+	 */
+	sql();
 }
 
 $tables = array(
@@ -54,8 +88,6 @@ $databases = array(
 
 NiceQuery::configTables($tables);
 NiceQuery::configDatabases($databases);
-
-$query = new NiceQuery();
 
 $query = NiceQuery::new();
 
