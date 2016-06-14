@@ -7,11 +7,14 @@
 
 #define PHP_NICEQUERY_VERSION "0.0.1"
 
+#ifdef ZTS
+#include "TSRM.h"
+#endif
+
 #include "php.h"
 
-extern zend_module_entry extnicequery_module;
-#define phpext_nicequery_ptr &extnicequery_module;
+extern zend_module_entry nicequery_module_entry;
 
-
+#define phpext_nicequery_ptr &nicequery_module_entry;
 
 #endif

@@ -57,6 +57,10 @@ class NiceQuery {
 	 * 返回一个 NiceQuerySQL 对象
 	 */
 	sql();
+
+	static configTables();
+
+	static configDatabases();
 }
 
 $tables = array(

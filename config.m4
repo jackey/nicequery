@@ -1,7 +1,7 @@
 PHP_ARG_ENABLE(nicequery, whether to enable nicequery, 
-[ --enable-extnicequery             Enable extnicequery])
+[ --enable-nicequery             Enable nicequery])
 
-if test "$PHP_EXTNICEQUERY" != "no"; then
-  PHP_NEW_EXTENSION(extnicequery, nicequery.c, $ext_shared)
+if test "$PHP_NICEQUERY" != "no"; then
+  PHP_NEW_EXTENSION(nicequery, nicequery.c, $ext_shared)
 fi
 
